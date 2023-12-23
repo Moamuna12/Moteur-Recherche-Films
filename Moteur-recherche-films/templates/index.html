@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="author" content="colorlib.com">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400" rel="stylesheet" />
+    <link href="/static/styles/main.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="s132">
+      <form action="http://localhost:5000/result" id="searchForm" method="POST">
+        <div class="inner-form">
+          <div class="input-field first-wrap">
+            <div class="input-select">
+              <select data-trigger="" name="category" form="searchForm">
+                <option placeholder="">All</option>
+				<option>Movie</option>
+                <option>Genre</option>
+                <option>Directors</option>
+                <option>Stars</option>
+                <option>Year</option>
+                <option>Rating</option>
+              </select>
+            </div>
+          </div>
+          <div class="input-field second-wrap">
+            <input id="search" name = "query" type="text" placeholder="Enter Keywords" />
+          </div>
+          <div class="input-field third-wrap">
+            <button class="btn-search" type="submit">Search</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <script src="static/js/extention/choices.js"></script>
+    <script>
+      const choices = new Choices('[data-trigger]',
+      {
+        searchEnabled: false,
+        itemSelectText: '',
+      });
+
+    </script>
+  </body>
+</html>
